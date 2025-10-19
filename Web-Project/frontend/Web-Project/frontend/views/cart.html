@@ -1,0 +1,286 @@
+<div class="cart-page">
+    <div class="page-header">
+        <h1>Shopping Cart</h1>
+        <p>Review your items before checkout</p>
+    </div>
+
+    <div class="cart-container">
+        <!-- Cart Items Section -->
+        <div class="cart-items">
+            <div class="cart-header">
+                <h2>Your Cart (<span id="cartItemCount">3</span> items)</h2>
+                <button class="btn btn-secondary btn-small" id="clearCart">
+                    <i class="fas fa-trash"></i> Clear Cart
+                </button>
+            </div>
+
+            <div class="cart-items-list" id="cartItemsList">
+                <!-- Cart Item 1 -->
+                <div class="cart-item">
+                    <div class="cart-item-image">
+                        <img src="assets/images/products/dog-food-1.jpg" alt="Premium Dog Food" onerror="this.src='https://via.placeholder.com/150x150/6C63FF/ffffff?text=Product'">
+                    </div>
+                    <div class="cart-item-details">
+                        <h3>Premium Dog Food</h3>
+                        <p class="cart-item-category">Dogs - Food</p>
+                        <div class="cart-item-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(4.5)</span>
+                        </div>
+                        <p class="cart-item-stock in-stock">
+                            <i class="fas fa-check-circle"></i> In Stock
+                        </p>
+                    </div>
+                    <div class="cart-item-actions">
+                        <div class="quantity-selector">
+                            <button class="qty-btn" onclick="decreaseQuantity(1)">
+                                <i class="fas fa-minus"></i>
+                            </button>
+                            <input type="number" value="2" min="1" max="99" class="qty-input" id="qty-1">
+                            <button class="qty-btn" onclick="increaseQuantity(1)">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <div class="cart-item-price">
+                            <span class="item-price">$29.99</span>
+                            <span class="item-total">$59.98</span>
+                        </div>
+                        <button class="btn-remove" onclick="removeCartItem(1)" title="Remove item">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Cart Item 2 -->
+                <div class="cart-item">
+                    <div class="cart-item-image">
+                        <img src="assets/images/products/cat-toy-1.jpg" alt="Cat Scratching Post" onerror="this.src='https://via.placeholder.com/150x150/6C63FF/ffffff?text=Product'">
+                        <div class="cart-item-badge sale">Sale</div>
+                    </div>
+                    <div class="cart-item-details">
+                        <h3>Cat Scratching Post</h3>
+                        <p class="cart-item-category">Cats - Accessories</p>
+                        <div class="cart-item-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(4.0)</span>
+                        </div>
+                        <p class="cart-item-stock in-stock">
+                            <i class="fas fa-check-circle"></i> In Stock
+                        </p>
+                    </div>
+                    <div class="cart-item-actions">
+                        <div class="quantity-selector">
+                            <button class="qty-btn" onclick="decreaseQuantity(2)">
+                                <i class="fas fa-minus"></i>
+                            </button>
+                            <input type="number" value="1" min="1" max="99" class="qty-input" id="qty-2">
+                            <button class="qty-btn" onclick="increaseQuantity(2)">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <div class="cart-item-price">
+                            <span class="item-price">$39.99 <del>$49.99</del></span>
+                            <span class="item-total">$39.99</span>
+                        </div>
+                        <button class="btn-remove" onclick="removeCartItem(2)" title="Remove item">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Cart Item 3 -->
+                <div class="cart-item">
+                    <div class="cart-item-image">
+                        <img src="assets/images/products/bird-cage.jpg" alt="Deluxe Bird Cage" onerror="this.src='https://via.placeholder.com/150x150/6C63FF/ffffff?text=Product'">
+                    </div>
+                    <div class="cart-item-details">
+                        <h3>Deluxe Bird Cage</h3>
+                        <p class="cart-item-category">Birds - Housing</p>
+                        <div class="cart-item-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(5.0)</span>
+                        </div>
+                        <p class="cart-item-stock low-stock">
+                            <i class="fas fa-exclamation-circle"></i> Only 3 left
+                        </p>
+                    </div>
+                    <div class="cart-item-actions">
+                        <div class="quantity-selector">
+                            <button class="qty-btn" onclick="decreaseQuantity(3)">
+                                <i class="fas fa-minus"></i>
+                            </button>
+                            <input type="number" value="1" min="1" max="3" class="qty-input" id="qty-3">
+                            <button class="qty-btn" onclick="increaseQuantity(3)">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <div class="cart-item-price">
+                            <span class="item-price">$89.99</span>
+                            <span class="item-total">$89.99</span>
+                        </div>
+                        <button class="btn-remove" onclick="removeCartItem(3)" title="Remove item">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Empty Cart Message (hidden by default) -->
+            <div class="empty-cart" id="emptyCart" style="display: none;">
+                <i class="fas fa-shopping-cart"></i>
+                <h3>Your cart is empty</h3>
+                <p>Add some products to get started!</p>
+                <a href="#shop" class="btn btn-primary" data-link>Continue Shopping</a>
+            </div>
+        </div>
+
+        <!-- Cart Summary Section -->
+        <div class="cart-summary">
+            <div class="summary-card">
+                <h3>Order Summary</h3>
+
+                <div class="summary-row">
+                    <span>Subtotal:</span>
+                    <span id="subtotal">$189.96</span>
+                </div>
+
+                <div class="summary-row">
+                    <span>Shipping:</span>
+                    <span id="shipping">$9.99</span>
+                </div>
+
+                <div class="summary-row">
+                    <span>Tax (10%):</span>
+                    <span id="tax">$19.00</span>
+                </div>
+
+                <div class="summary-row discount">
+                    <span>Discount:</span>
+                    <span id="discount">-$10.00</span>
+                </div>
+
+                <div class="summary-divider"></div>
+
+                <div class="summary-row total">
+                    <span>Total:</span>
+                    <span id="total">$208.95</span>
+                </div>
+
+                <!-- Promo Code -->
+                <div class="promo-code">
+                    <h4>Have a promo code?</h4>
+                    <div class="promo-input">
+                        <input type="text" id="promoCode" placeholder="Enter code">
+                        <button class="btn btn-secondary btn-small">Apply</button>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="summary-actions">
+                    <button class="btn btn-primary btn-block" id="checkoutBtn">
+                        <i class="fas fa-lock"></i> Proceed to Checkout
+                    </button>
+                    <a href="#shop" class="btn btn-secondary btn-block" data-link>
+                        <i class="fas fa-arrow-left"></i> Continue Shopping
+                    </a>
+                </div>
+
+                <!-- Payment Methods -->
+                <div class="payment-methods">
+                    <p>We accept:</p>
+                    <div class="payment-icons">
+                        <i class="fab fa-cc-visa"></i>
+                        <i class="fab fa-cc-mastercard"></i>
+                        <i class="fab fa-cc-amex"></i>
+                        <i class="fab fa-cc-paypal"></i>
+                        <i class="fab fa-cc-apple-pay"></i>
+                    </div>
+                </div>
+
+                <!-- Security Badge -->
+                <div class="security-badge">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Secure Checkout</span>
+                </div>
+            </div>
+
+            <!-- Shipping Info Card -->
+            <div class="info-card">
+                <h4><i class="fas fa-truck"></i> Free Shipping</h4>
+                <p>Free shipping on orders over $50!</p>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 85%;"></div>
+                </div>
+                <p class="info-text">You're $11.04 away from free shipping!</p>
+            </div>
+
+            <!-- Customer Service -->
+            <div class="info-card">
+                <h4><i class="fas fa-headset"></i> Need Help?</h4>
+                <p>Our customer service team is here to assist you</p>
+                <a href="#contact" class="link" data-link>Contact Support</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Recommended Products -->
+    <section class="recommended-products">
+        <h2>You Might Also Like</h2>
+        <div class="products-grid">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="assets/images/products/dog-toy.jpg" alt="Dog Toy" onerror="this.src='https://via.placeholder.com/300x300/6C63FF/ffffff?text=Product'">
+                </div>
+                <div class="product-info">
+                    <h3>Interactive Dog Toy</h3>
+                    <p class="product-category">Dogs - Toys</p>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(5.0)</span>
+                    </div>
+                    <div class="product-footer">
+                        <span class="product-price">$19.99</span>
+                        <button class="btn btn-primary btn-small">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="assets/images/products/cat-food.jpg" alt="Cat Food" onerror="this.src='https://via.placeholder.com/300x300/6C63FF/ffffff?text=Product'">
+                </div>
+                <div class="product-info">
+                    <h3>Premium Cat Food</h3>
+                    <p class="product-category">Cats - Food</p>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>(4.5)</span>
+                    </div>
+                    <div class="product-footer">
+                        <span class="product-price">$34.99</span>
+                        <button class="btn btn-primary btn-small">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

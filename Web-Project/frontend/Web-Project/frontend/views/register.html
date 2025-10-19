@@ -1,0 +1,154 @@
+<div class="auth-page">
+    <div class="auth-container">
+        <div class="auth-card">
+            <div class="auth-header">
+                <i class="fas fa-paw"></i>
+                <h2>Create Account</h2>
+                <p>Join the Claudio Shop family today!</p>
+            </div>
+
+            <form class="auth-form" id="registerForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">
+                            <i class="fas fa-user"></i> First Name
+                        </label>
+                        <input
+                            type="text"
+                            id="firstName"
+                            name="firstName"
+                            placeholder="John"
+                            required
+                            autocomplete="given-name"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lastName">
+                            <i class="fas fa-user"></i> Last Name
+                        </label>
+                        <input
+                            type="text"
+                            id="lastName"
+                            name="lastName"
+                            placeholder="Doe"
+                            required
+                            autocomplete="family-name"
+                        >
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="registerEmail">
+                        <i class="fas fa-envelope"></i> Email Address
+                    </label>
+                    <input
+                        type="email"
+                        id="registerEmail"
+                        name="email"
+                        placeholder="your.email@example.com"
+                        required
+                        autocomplete="email"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">
+                        <i class="fas fa-phone"></i> Phone Number
+                    </label>
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="+1 234 567 8900"
+                        autocomplete="tel"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="registerPassword">
+                        <i class="fas fa-lock"></i> Password
+                    </label>
+                    <div class="password-input">
+                        <input
+                            type="password"
+                            id="registerPassword"
+                            name="password"
+                            placeholder="Create a strong password"
+                            required
+                            autocomplete="new-password"
+                            minlength="8"
+                        >
+                        <button type="button" class="toggle-password" onclick="togglePassword('registerPassword')">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                    <small class="form-hint">Must be at least 8 characters long</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmPassword">
+                        <i class="fas fa-lock"></i> Confirm Password
+                    </label>
+                    <div class="password-input">
+                        <input
+                            type="password"
+                            id="confirmPassword"
+                            name="confirmPassword"
+                            placeholder="Re-enter your password"
+                            required
+                            autocomplete="new-password"
+                            minlength="8"
+                        >
+                        <button type="button" class="toggle-password" onclick="togglePassword('confirmPassword')">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="terms" required>
+                        <span>I agree to the <a href="#terms" class="link" data-link>Terms & Conditions</a> and <a href="#privacy" class="link" data-link>Privacy Policy</a></span>
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="newsletter">
+                        <span>Send me news and special offers</span>
+                    </label>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block">
+                    <i class="fas fa-user-plus"></i> Create Account
+                </button>
+
+                <div class="form-divider">
+                    <span>OR</span>
+                </div>
+
+                <div class="social-login">
+                    <button type="button" class="btn btn-social btn-google">
+                        <i class="fab fa-google"></i> Sign up with Google
+                    </button>
+                    <button type="button" class="btn btn-social btn-facebook">
+                        <i class="fab fa-facebook-f"></i> Sign up with Facebook
+                    </button>
+                </div>
+
+                <div class="auth-footer">
+                    <p>Already have an account? <a href="#login" class="link" data-link>Login here</a></p>
+                </div>
+            </form>
+        </div>
+
+        <div class="auth-image">
+            <img src="assets/images/auth-pets.png" alt="Happy Pets" onerror="this.src='https://via.placeholder.com/500x600/6C63FF/ffffff?text=Join+Claudio+Shop'">
+            <div class="auth-image-overlay">
+                <h3>Start Your Pet Care Journey</h3>
+                <p>Access exclusive deals and personalized recommendations</p>
+            </div>
+        </div>
+    </div>
+</div>

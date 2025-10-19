@@ -1,0 +1,345 @@
+<div class="profile-page">
+    <div class="page-header">
+        <h1>My Account</h1>
+        <p>Manage your account settings and orders</p>
+    </div>
+
+    <div class="profile-container">
+        <!-- Sidebar Navigation -->
+        <aside class="profile-sidebar">
+            <div class="profile-card">
+                <div class="profile-avatar">
+                    <img src="assets/images/default-avatar.png" alt="Profile" onerror="this.src='https://via.placeholder.com/150x150/6C63FF/ffffff?text=User'">
+                    <button class="avatar-edit">
+                        <i class="fas fa-camera"></i>
+                    </button>
+                </div>
+                <h3 id="userName">John Doe</h3>
+                <p id="userEmail">john.doe@example.com</p>
+                <span class="user-badge">Premium Member</span>
+            </div>
+
+            <nav class="profile-nav">
+                <a href="#profile" class="profile-nav-item active" data-section="overview">
+                    <i class="fas fa-user"></i> Account Overview
+                </a>
+                <a href="#profile" class="profile-nav-item" data-section="orders">
+                    <i class="fas fa-shopping-bag"></i> My Orders
+                </a>
+                <a href="#profile" class="profile-nav-item" data-section="wishlist">
+                    <i class="fas fa-heart"></i> Wishlist
+                </a>
+                <a href="#profile" class="profile-nav-item" data-section="addresses">
+                    <i class="fas fa-map-marker-alt"></i> Addresses
+                </a>
+                <a href="#profile" class="profile-nav-item" data-section="settings">
+                    <i class="fas fa-cog"></i> Settings
+                </a>
+                <a href="#profile" class="profile-nav-item" data-section="security">
+                    <i class="fas fa-shield-alt"></i> Security
+                </a>
+                <a href="#logout" class="profile-nav-item logout">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content Area -->
+        <div class="profile-content">
+            <!-- Account Overview Section -->
+            <div class="profile-section active" id="overview">
+                <h2>Account Overview</h2>
+
+                <!-- Quick Stats -->
+                <div class="overview-stats">
+                    <div class="stat-card">
+                        <i class="fas fa-shopping-cart"></i>
+                        <div>
+                            <h3>12</h3>
+                            <p>Total Orders</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-heart"></i>
+                        <div>
+                            <h3>8</h3>
+                            <p>Wishlist Items</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-star"></i>
+                        <div>
+                            <h3>250</h3>
+                            <p>Reward Points</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-tags"></i>
+                        <div>
+                            <h3>$45</h3>
+                            <p>Savings This Year</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Orders -->
+                <div class="overview-section">
+                    <div class="section-header">
+                        <h3>Recent Orders</h3>
+                        <a href="#profile" class="link" data-section="orders">View All</a>
+                    </div>
+                    <div class="orders-preview">
+                        <div class="order-card">
+                            <div class="order-header">
+                                <span class="order-number">#ORD-2024-001</span>
+                                <span class="order-status delivered">Delivered</span>
+                            </div>
+                            <div class="order-items">
+                                <img src="assets/images/products/dog-food-1.jpg" alt="Product" onerror="this.src='https://via.placeholder.com/80x80/6C63FF/ffffff?text=Product'">
+                                <div class="order-details">
+                                    <p>Premium Dog Food + 2 more items</p>
+                                    <small>Delivered on Jan 15, 2025</small>
+                                </div>
+                            </div>
+                            <div class="order-footer">
+                                <span class="order-total">$129.99</span>
+                                <button class="btn btn-secondary btn-small">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Account Info -->
+                <div class="overview-section">
+                    <div class="section-header">
+                        <h3>Account Information</h3>
+                        <button class="btn btn-secondary btn-small" data-section="settings">Edit</button>
+                    </div>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <strong>Full Name:</strong>
+                            <span>John Doe</span>
+                        </div>
+                        <div class="info-item">
+                            <strong>Email:</strong>
+                            <span>john.doe@example.com</span>
+                        </div>
+                        <div class="info-item">
+                            <strong>Phone:</strong>
+                            <span>+1 234 567 8900</span>
+                        </div>
+                        <div class="info-item">
+                            <strong>Member Since:</strong>
+                            <span>January 2024</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Orders Section -->
+            <div class="profile-section" id="orders">
+                <h2>My Orders</h2>
+
+                <div class="orders-filter">
+                    <select class="filter-select">
+                        <option value="all">All Orders</option>
+                        <option value="processing">Processing</option>
+                        <option value="shipped">Shipped</option>
+                        <option value="delivered">Delivered</option>
+                        <option value="cancelled">Cancelled</option>
+                    </select>
+                    <div class="search-bar">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search orders...">
+                    </div>
+                </div>
+
+                <div class="orders-list">
+                    <!-- Order 1 -->
+                    <div class="order-item">
+                        <div class="order-main">
+                            <div class="order-info">
+                                <h4>#ORD-2024-001</h4>
+                                <p>Placed on January 15, 2025</p>
+                                <span class="order-status delivered">Delivered</span>
+                            </div>
+                            <div class="order-products">
+                                <img src="assets/images/products/dog-food-1.jpg" alt="Product" onerror="this.src='https://via.placeholder.com/60x60/6C63FF/ffffff?text=P'">
+                                <img src="assets/images/products/cat-toy-1.jpg" alt="Product" onerror="this.src='https://via.placeholder.com/60x60/6C63FF/ffffff?text=P'">
+                                <span class="more-items">+1</span>
+                            </div>
+                            <div class="order-total">
+                                <strong>$129.99</strong>
+                            </div>
+                            <div class="order-actions">
+                                <button class="btn btn-secondary btn-small">View Details</button>
+                                <button class="btn btn-primary btn-small">Reorder</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Add more orders similarly -->
+                </div>
+            </div>
+
+            <!-- Wishlist Section -->
+            <div class="profile-section" id="wishlist">
+                <h2>My Wishlist</h2>
+
+                <div class="products-grid">
+                    <div class="product-card">
+                        <button class="btn-remove-wishlist"><i class="fas fa-times"></i></button>
+                        <div class="product-image">
+                            <img src="assets/images/products/dog-toy.jpg" alt="Product" onerror="this.src='https://via.placeholder.com/300x300/6C63FF/ffffff?text=Product'">
+                        </div>
+                        <div class="product-info">
+                            <h3>Interactive Dog Toy</h3>
+                            <p class="product-category">Dogs - Toys</p>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>(5.0)</span>
+                            </div>
+                            <div class="product-footer">
+                                <span class="product-price">$19.99</span>
+                                <button class="btn btn-primary btn-small">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Addresses Section -->
+            <div class="profile-section" id="addresses">
+                <div class="section-header">
+                    <h2>Saved Addresses</h2>
+                    <button class="btn btn-primary">
+                        <i class="fas fa-plus"></i> Add New Address
+                    </button>
+                </div>
+
+                <div class="addresses-grid">
+                    <div class="address-card default">
+                        <div class="address-badge">Default</div>
+                        <div class="address-type">
+                            <i class="fas fa-home"></i>
+                            <strong>Home</strong>
+                        </div>
+                        <p class="address-name">John Doe</p>
+                        <p class="address-text">123 Pet Street<br>New York, NY 10001<br>United States</p>
+                        <p class="address-phone">+1 234 567 8900</p>
+                        <div class="address-actions">
+                            <button class="btn btn-secondary btn-small">Edit</button>
+                            <button class="btn btn-secondary btn-small">Remove</button>
+                        </div>
+                    </div>
+
+                    <div class="address-card">
+                        <div class="address-type">
+                            <i class="fas fa-briefcase"></i>
+                            <strong>Work</strong>
+                        </div>
+                        <p class="address-name">John Doe</p>
+                        <p class="address-text">456 Business Ave<br>New York, NY 10002<br>United States</p>
+                        <p class="address-phone">+1 234 567 8901</p>
+                        <div class="address-actions">
+                            <button class="btn btn-secondary btn-small">Edit</button>
+                            <button class="btn btn-secondary btn-small">Remove</button>
+                            <button class="btn btn-primary btn-small">Set as Default</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Settings Section -->
+            <div class="profile-section" id="settings">
+                <h2>Account Settings</h2>
+
+                <form class="settings-form">
+                    <div class="form-section">
+                        <h3>Personal Information</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="settingsFirstName">First Name</label>
+                                <input type="text" id="settingsFirstName" value="John">
+                            </div>
+                            <div class="form-group">
+                                <label for="settingsLastName">Last Name</label>
+                                <input type="text" id="settingsLastName" value="Doe">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="settingsEmail">Email Address</label>
+                            <input type="email" id="settingsEmail" value="john.doe@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="settingsPhone">Phone Number</label>
+                            <input type="tel" id="settingsPhone" value="+1 234 567 8900">
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Preferences</h3>
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" checked>
+                                <span>Email notifications for orders</span>
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" checked>
+                                <span>Promotional emails and offers</span>
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox">
+                                <span>SMS notifications</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Save Changes</button>
+                </form>
+            </div>
+
+            <!-- Security Section -->
+            <div class="profile-section" id="security">
+                <h2>Security Settings</h2>
+
+                <div class="security-item">
+                    <div class="security-info">
+                        <h3><i class="fas fa-lock"></i> Password</h3>
+                        <p>Last changed 3 months ago</p>
+                    </div>
+                    <button class="btn btn-secondary">Change Password</button>
+                </div>
+
+                <div class="security-item">
+                    <div class="security-info">
+                        <h3><i class="fas fa-shield-alt"></i> Two-Factor Authentication</h3>
+                        <p>Add an extra layer of security to your account</p>
+                    </div>
+                    <button class="btn btn-primary">Enable 2FA</button>
+                </div>
+
+                <div class="security-item">
+                    <div class="security-info">
+                        <h3><i class="fas fa-history"></i> Login History</h3>
+                        <p>View recent login activities</p>
+                    </div>
+                    <button class="btn btn-secondary">View History</button>
+                </div>
+
+                <div class="danger-zone">
+                    <h3>Danger Zone</h3>
+                    <p>Once you delete your account, there is no going back. Please be certain.</p>
+                    <button class="btn btn-danger">Delete Account</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
