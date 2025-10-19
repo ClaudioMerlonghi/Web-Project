@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Claudio Shop - Your trusted pet shop for all your furry friends">
+    <title>Claudio Shop - Pet Shop</title>
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-paw"></i>
+                <span>Claudio Shop</span>
+            </div>
+
+            <div class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link" data-link>Home</a>
+                <a href="#shop" class="nav-link" data-link>Shop</a>
+                <a href="#categories" class="nav-link" data-link>Categories</a>
+                <a href="#about" class="nav-link" data-link>About</a>
+            </div>
+
+            <div class="nav-actions">
+                <a href="#cart" class="nav-icon" data-link>
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </a>
+                <a href="#profile" class="nav-icon" data-link id="profileIcon">
+                    <i class="fas fa-user"></i>
+                </a>
+                <a href="#login" class="btn btn-primary" data-link id="loginBtn">Login</a>
+                <button class="nav-toggle" id="navToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Area (SPA Container) -->
+    <main id="app"></main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3><i class="fas fa-paw"></i> Claudio Shop</h3>
+                <p>Your trusted pet shop for all your furry, feathered, and scaly friends.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home" data-link>Home</a></li>
+                    <li><a href="#shop" data-link>Shop</a></li>
+                    <li><a href="#categories" data-link>Categories</a></li>
+                    <li><a href="#about" data-link>About Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Customer Service</h4>
+                <ul>
+                    <li><a href="#faq" data-link>FAQ</a></li>
+                    <li><a href="#shipping" data-link>Shipping Info</a></li>
+                    <li><a href="#returns" data-link>Returns</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <ul class="contact-info">
+                    <li><i class="fas fa-phone"></i> +1 234 567 8900</li>
+                    <li><i class="fas fa-envelope"></i> info@claudioshop.com</li>
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Pet Street, City</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Claudio Shop. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files (Loaded Once) -->
+    <script src="assets/js/router.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
